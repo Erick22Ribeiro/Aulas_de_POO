@@ -11,7 +11,7 @@ public class DaoAlteracao {
 	
 	public DaoAlteracao() {
 		
-		String sql = "UPDATE game SET ano = 1983 WHERE id = 4";
+		String sql = "UPDATE game SET ano = 1983 WHERE id = 6";
 		
 		try {
 			

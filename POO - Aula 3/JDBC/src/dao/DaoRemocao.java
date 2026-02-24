@@ -11,16 +11,17 @@ public class DaoRemocao {
 	
 	public DaoRemocao() {
 		
-		String sql = "DELETE FROM game WHERE id = 7";
+		String sql = "DELETE FROM game WHERE id = 6";
 		
 		try {
 			
 			Connection conexao = DriverManager.getConnection(url, "root", "");  
 			
 			PreparedStatement operacao = conexao.prepareStatement(sql);
+			
 			operacao.execute();
 			
-			System.out.print("Inclusão 2 de games inseridos com sucesso!");
+			System.out.print("Game 6 removido com sucesso!");
 			
 			conexao.close();
 			

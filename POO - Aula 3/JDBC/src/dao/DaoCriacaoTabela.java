@@ -7,20 +7,21 @@ import java.sql.SQLException;
 
 public class DaoCriacaoTabela {
 
-	static final String url = "jdbc:mysql://localhost/minhaLoja";
+	static final String url = "jdbc:mysql://localhost/minhaLoja"; //Adicionar ao final o nome do banco
 	
-	public DaoCriacaoTabela() {
+	public DaoCriacaoTabela() { //Construtor
 		
-		String sql = "CREATE TABLE game (id INT NOT NULL AUTO_INCREMENT PRIMARY_KEY, titulo VARCHAR(30), ano INT";
+		String sql = "CREATE TABLE game (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, titulo VARCHAR(30), ano INT)";
 		
 		try {
 			
 			Connection conexao = DriverManager.getConnection(url, "root", "");  
 			
 			PreparedStatement operacao = conexao.prepareStatement(sql);
+			
 			operacao.execute();
 			
-			System.out.print("Tabela game criada com sucesso!");
+			System.out.print("Tabela criada com sucesso!");
 			
 			conexao.close();
 			

@@ -7,21 +7,23 @@ import java.sql.SQLException;
 
 public class DaoInclusao2 {
 	
-	static final String url = "jdbc:mysql://localhost";
+	static final String url = "jdbc:mysql://localhost/minhaLoja";
 	
 	public DaoInclusao2() {
 		
 		String sql = "INSERT INTO game(titulo, ano) VALUES " +
+				"('Paredão', 1977)," +
                 "('Pac-Man', 1982), " +
                 "('Super Mario Bros', 1985), " +
-                "('Sonic The Hedgehog', 1991)";
-		
+                "('Sonic The Hedgehog', 1991), " +
+                "('Black Belt', 1987)";
 		
 		try {
 			
 			Connection conexao = DriverManager.getConnection(url, "root", "");  
 			
 			PreparedStatement operacao = conexao.prepareStatement(sql);
+			
 			operacao.execute();
 			
 			System.out.print("Inclusão 2 de games inseridos com sucesso!");

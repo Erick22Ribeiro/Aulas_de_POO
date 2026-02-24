@@ -1,12 +1,13 @@
 package controle;
 
-import dao.DaoAlteracao;
 import dao.DaoConexao;
 import dao.DaoCriacaoDB;
 import dao.DaoCriacaoTabela;
 import dao.DaoInclusao1;
 import dao.DaoInclusao2;
+import dao.DaoAlteracao;
 import dao.DaoLista;
+import dao.DaoRemocao;
 
 public class Programa {
 	public static void main(String args[]) {
@@ -23,7 +24,9 @@ public class Programa {
 		
 		//DaoAlteracao daoAlteracao = new DaoAlteracao();
 		
-		DaoLista daoLista = new DaoLista();
+		//DaoLista daoLista = new DaoLista();
+		
+		DaoRemocao daoRemocao = new DaoRemocao();
 		
 	}
 }

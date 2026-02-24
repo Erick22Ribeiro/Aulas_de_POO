@@ -9,7 +9,7 @@ public class DaoCriacaoDB {
 	
 	static final String url = "jdbc:mysql://localhost";
 
-	public void DaoCriacaoDB() {
+	public DaoCriacaoDB() { //Construtor
 			
 		String sql = "CREATE DATABSE minhaLoja";
 		
@@ -18,9 +18,10 @@ public class DaoCriacaoDB {
 			Connection conexao = DriverManager.getConnection(url, "root", "");  //precisa fazer o import correto
 			
 			PreparedStatement operacao = conexao.prepareStatement(sql);
+			
 			operacao.execute();
 			
-			System.out.print("Conexão estabelecida com sucesso!");
+			System.out.print("Banco de dados criado com sucesso!");
 			
 			conexao.close();
 			
@@ -31,6 +32,5 @@ public class DaoCriacaoDB {
 			
 		}
 	}
-
 
 }

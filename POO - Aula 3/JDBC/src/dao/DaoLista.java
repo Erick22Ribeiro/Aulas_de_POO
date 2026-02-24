@@ -24,7 +24,9 @@ public class DaoLista {
 			
 			resultado.first();
 			
-			System.out.print(resultado.getObject(1) + " | " + resultado.getObject(2)); //pega o conteudo da coluna 1
+			do {
+				System.out.println(resultado.getObject(1) + " | " + resultado.getObject(2) + " (" + resultado.getObject(3) + ")");
+			} while(resultado.next());
 			
 			conexao.close();
 			
