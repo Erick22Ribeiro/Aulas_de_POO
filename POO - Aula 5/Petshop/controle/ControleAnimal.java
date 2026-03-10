@@ -14,8 +14,10 @@ public class ControleAnimal {
 		daoAnimal.inserir(animal);
 	}
 	
-	public void consultarAnimal() {
+	public Animal consultarAnimal(int id) {
+		animal = daoAnimal.consultar(id);
 		
+		return animal;
 	}
 	
 	public void alterarAnimal() {
